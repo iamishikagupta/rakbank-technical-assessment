@@ -1,0 +1,102 @@
+.step {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+
+  .upper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6055c7;
+    color: white;
+    text-align: center;
+    height: 100vh;
+
+    .title {
+      height: 30vh;
+      width: 30vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .lower {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    .option-box {
+      display: flex;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-family: 'Verdana', sans-serif;
+
+      button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        padding: 0.5rem;
+        position: relative;
+        border-radius: 20px;
+        font-family: 'Verdana', sans-serif;
+
+
+
+        &:hover {
+          background-color: rgba(140, 98, 219, 0.425);
+          transform: scale(1.1);
+          animation: float 5s ease-in-out infinite;
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        &.active-option {
+          background-color: rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+          transform: scale(1.1);
+        }
+
+        &.option-0:hover {
+          background-color: rgba(255, 99, 132, 0.5);
+        }
+
+        &.option-1:hover {
+          background-color: rgba(54, 162, 235, 0.5);
+        }
+
+        &.option-2:hover {
+          background-color: rgba(255, 159, 64, 0.5);
+        }
+
+        &.option-3:hover {
+          background-color: rgba(75, 192, 192, 0.767);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .step {
+    flex-direction: column;
+  }
+}
